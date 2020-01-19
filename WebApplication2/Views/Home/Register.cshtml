@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Register";
+}
+<head>
+    <link href="~/css/site.css"/>
+</head>
+<div class="container register">
+    <div class="row">
+        <div class="col-md-3 register-left">
+            <img src="~/images/logo_white.png" alt="" />
+            <h3>Welcome</h3>
+            <p>You are 30 seconds away from keeping track of your own money!</p>
+            <input type="submit" onclick ='window.location.href ="@Url.Action("Login","Home")";' name="" value="Login" /><br />
+        </div>
+        <div class="col-md-9">
+
+            <div class=" register-form " >
+                <form asp-action="register">
+                    <div class="col-md-8" style="display:flex; flex-wrap:wrap;">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="First Name *" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Last Name *" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="username *" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Password *" />
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Confirm Password *" />
+                        </div>
+                        <input type="submit" class="btnRegister" value="Register" />
+                    </div>
+                </form>
+
+            </div>
+        </div>
+</div>
+</div>  

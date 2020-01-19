@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My Money Manager</title>
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+    <link href="~/css/site.css" rel="stylesheet" />
+    <script src="~/lib/jquery/dist/jquery.min.js">
+    </script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js">
+    </script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top" >
+        <div class="navbar-inner">
+            <div class="container " >
+                <br/>
+                <button type="button" class="btn btn-navbar bg-primary active "  style="padding:15px; margin-top:10px" data-toggle="collapse" data-target=".nav-collapse" l>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("MY Money Manager", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <br />
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Register", "Register", "Home")</li>
+                        <li>@Html.ActionLink("Debts", "Debts", "Home")</li>
+                        <li>@Html.ActionLink("New Debt", "New", "Home")</li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My Money Manager</p>
+        </footer>
+    </div>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
